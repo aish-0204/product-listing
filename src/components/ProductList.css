@@ -1,0 +1,115 @@
+/* Container for the entire layout */
+.product-list-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px; /* Adjust top margin for spacing */
+}
+
+/* Sidebar for the shopping cart */
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Light background with some opacity */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 100px); /* Full viewport height minus margins */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+/* Styling for the product list */
+.product-list {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    background: url('https://videos.pexels.com/video-files/2611250/2611250-uhd_2560_1440_30fps.mp4') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Individual product item */
+.product-item {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    max-width: 200px;
+    text-align: center;
+    color: #444;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 0 0 auto;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product-item h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-item p {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #666;
+}
+
+.product-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Search bar container */
+.search-bar {
+    position: fixed; /* Changed to fixed position */
+    top: 20px;
+    width: calc(100% - 40px);
+    left: 20px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for the search input field */
+.search-bar input {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid #f4a261;
+    border-radius: 8px;
+    background: #fff;
+    color: #333;
+    font-size: 1em;
+}
+
+/* Sort dropdown container */
+.sort-dropdown {
+    position: fixed; /* Changed to fixed position */
+    top: 90px; /* Increased space between search bar and sort dropdown */
+    width: calc(100% - 40px);
+    left: 20px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for the sort dropdown select element */
+.sort-dropdown select {
+    padding: 15px;
+    border: 2px solid #2a9d8f;
+    border-radius: 8px;
+    background: #fff;
+    color: #333;
+    font-size: 1em;
+    max-width: 300px; /* Consistent width with search bar */
+}
